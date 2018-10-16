@@ -5,25 +5,22 @@
   "license": "OSL-3.0",
   "repository": "git@github.com:deity-io/falcon.git",
   "scripts": {
-    "prepush": "npm run test",
-    "precommit": "lint-staged",
     "test": "lerna run test:coverage",
     "prepublish": "lerna run --scope=@deity/falcon-ui --stream prepare",
     "prepare": "lerna run --stream prepare",
     "lint": "eslint ./"
   },
   "devDependencies": {
-    "@deity/eslint-config-falcon": "0.0.1",
-    "eslint": "4.13.1",
-    "eslint-plugin-prettier": "^2.6.2",
-    "husky": "^0.14.3",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^23.6.0",
-    "jest-extended": "^0.9.0",
-    "lerna": "^3.4.0",
-    "lint-staged": "^7.2.2",
-    "prettier": "^1.14.2",
-    "typescript": "^3.0.3"
+    "eslint": "4.19.1",
+    "eslint-plugin-prettier": "2.7.0",
+    "husky": "1.1.1",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "23.6.0",
+    "jest-extended": "0.11.0",
+    "lerna": "3.4.1",
+    "lint-staged": "7.3.0",
+    "prettier": "1.14.3",
+    "typescript": "3.1.1"
   },
   "workspaces": [
     "packages/create-falcon-app",
@@ -36,8 +33,6 @@
     "packages/falcon-logger",
     "packages/falcon-shop-extension",
     "packages/falcon-blog-extension",
-    "packages/falcon-tweets-extension",
-    "packages/falcon-dynamic-route-extension",
     "packages/falcon-magento2-api",
     "packages/falcon-wordpress-api",
     "packages/falcon-errors",
@@ -46,5 +41,10 @@
     "packages/falcon-dev-tools/falcon-i18n-webpack-plugin",
     "examples/shop-with-blog/client",
     "examples/shop-with-blog/server"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }

@@ -1,5 +1,6 @@
 # DEITY FALCON
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b8b60963bac941f081de64671ae8b7fd)](https://app.codacy.com/app/Deity/falcon?utm_source=github.com&utm_medium=referral&utm_content=deity-io/falcon&utm_campaign=Badge_Grade_Settings)
 [![Build Status](https://travis-ci.org/deity-io/falcon.svg?branch=master)](https://travis-ci.org/deity-io/falcon)
 [![License: OSL-3.0](https://img.shields.io/badge/license-OSL--3.0-yellow.svg?style=flat-square)](https://opensource.org/licenses/OSL-3.0)
 [![Blazing Fast](https://img.shields.io/badge/speed-blazing%20%F0%9F%94%A5-brightgreen.svg?style=flat-square)](https://twitter.com/acdlite/status/974390255393505280)
@@ -39,7 +40,7 @@ NodeJS (8.x +) https://nodejs.org
 Yarn (Optional, but recommended) https://yarnpkg.com
 
 
-Yarn can be installed via `npm install -g yarn` or https://yarnpkg.com/lang/en/docs/install
+To install Yarn, see https://yarnpkg.com/lang/en/docs/install
 
 ## Starting a project
 
@@ -117,17 +118,6 @@ cd package-name
 yarn test
 yarn test:coverage
 ```
-
-#### Example how to add @deity/falcon-client dependency into examples/shop-with-blog
-
-package version needs to be specified as it's not published to npm registry yet.
-
-```
-cd examples/shop-with-blog
-yarn add @deity/falcon-client@1.0.0
-```
-
-Important thing now is all those packages are linked together so changing something in `@deity/falcon-client` is automatically reflected in the `shop-with-blog` example.
 
 ### TODO
 - jest for all packages
